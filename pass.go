@@ -2,7 +2,7 @@ package gopass
 
 import (
 	"os"
-	"fmt"
+	_"fmt"
 )
 
 // getPasswd returns the input read from terminal.
@@ -17,8 +17,6 @@ func getPasswd(masked bool) []byte {
 
 	for {
 		if v := getch(); v == 127 || v == 8 {
-		  fmt.Println("v = " , v)
-		  fmt.Println("pass = " , pass , len(pass))
 			if l := len(pass); l > 0 {
 				pass = pass[:l-1]
 				os.Stdout.Write(bs)
@@ -28,7 +26,7 @@ func getPasswd(masked bool) []byte {
 		} else if v != 0 {
 			pass = append(pass, v)
 			if masked {
-			  os.Stdout.Write(pass)
+			  os.Stdout.Write([]byte{v})
 			}else{
 			  os.Stdout.Write(mask)
 			}
