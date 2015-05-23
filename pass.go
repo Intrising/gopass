@@ -9,7 +9,6 @@ import (
 // If masked is true, typing will be matched by asterisks on the screen.
 // Otherwise, typing will echo nothing.
 func getPasswd(masked bool) []byte {
-  fmt.Println("getPasswd")
 	var pass, bs, mask []byte
 	if masked {
 		bs = []byte("\b \b")
