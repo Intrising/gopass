@@ -16,6 +16,8 @@ func getPasswd(masked bool) []byte {
 
 	for {
 		if v := getch(); v == 127 || v == 8 {
+		  fmt.Println("v = " , v)
+		  fmt.Println("pass = " , pass , len(pass))
 			if l := len(pass); l > 0 {
 				pass = pass[:l-1]
 				os.Stdout.Write(bs)
