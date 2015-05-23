@@ -2,6 +2,7 @@ package gopass
 
 import (
 	"os"
+	"fmt"
 )
 
 // getPasswd returns the input read from terminal.
