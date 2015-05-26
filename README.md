@@ -9,7 +9,7 @@ Example:
 package main
 
 import "fmt"
-import "github.com/howeyc/gopass"
+import "github.com/Intrising/gopass"
 
 func main() {
 	fmt.Printf("Password: ")
